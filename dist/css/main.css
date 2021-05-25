@@ -220,8 +220,9 @@ body {
   background: #f16e20;
 }
 .poster .ground {
-  left: 52.2%;
+  left: 51.3%;
   top: 31%;
+  z-index: 1;
 }
 .poster .ground__touch-up {
   position: absolute;
@@ -234,6 +235,38 @@ body {
   border-radius: 999rem;
   z-index: -1;
   background: #923f21;
+}
+.poster .ground__touch-up2 {
+  position: absolute;
+  top: 36%;
+  left: 64.4%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 33%;
+  width: 3%;
+  height: 3%;
+  z-index: 2;
+  background: #923f21;
+}
+.poster .ground__touch-up3 {
+  position: absolute;
+  top: 35.4%;
+  left: 22%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 33%;
+  width: 6%;
+  height: 4%;
+  z-index: 0;
+  background: #923f21;
+}
+.poster .title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  top: 72.5%;
 }
 
 .hidden {
