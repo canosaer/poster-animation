@@ -83,12 +83,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -103,132 +103,140 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 
 ==============================================
 CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
+AUTHOR:		Eric Canosa
 ==============================================
 
 TABLE OF CONTENTS:
 
-0. Reset
-1. Main Layout
-2. Content
+0. Initialization
+1. Styles
 
 ==============================================
 */
-/* 0. Reset ================================= */
-/* 
-If you want to add partials, use Sass Modules via @use:
-@use 'variables';
-
-Usage: partial-name.variable/mixin/function-name:
-background: variables.$primary-color;
-*/
-/* 1. Main Layout ================================= */
-* {
-	box-sizing: border-box;
+/* 0. Initialization ========================= */
+/* 1. Styles ================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-	background: #2e3032;
+  min-height: 100vh;
+  padding: 5vh 5vw;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+  background: whitesmoke;
+  font-family: sans-serif;
 }
 
-/* 2. Content ================================= */
-.floating-box {
-	position: relative;
-	font-family: sans-serif;
-	width: 90%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
+.poster {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff2d7;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  z-index: -2;
+  /*
+  	Everything in % so it's fully responsive!!!!!
+  */
 }
-.floating-box .foreground {
-	position: relative;
-	z-index: 2;
-	transform: translateZ(100px);
+@media (min-aspect-ratio: 1000/1500) {
+  .poster {
+    width: 60vh;
+    height: 90vh;
+  }
 }
-.floating-box .background {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: white;
-	z-index: 1;
-	transition: 0.2s;
-	transform: translateX(20px) perspective(600px) rotateY(15deg);
+@media (max-aspect-ratio: 1000/1500) {
+  .poster {
+    width: 90vw;
+    height: 135vw;
+  }
 }
-.floating-box:hover .background {
-	transform: translateX(-30px) perspective(600px) rotateY(-15deg);
+.poster .full-size {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
 }
-.floating-box .logo {
-	position: absolute;
-	top: -30px;
-	width: 60px;
-	z-index: 2;
-	transform: translateZ(100px);
-	transition: 0.3s;
+.poster .death-star {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
 }
-.floating-box .logo:hover {
-	-ms-transform: rotate(-0.4turn);
-	    transform: rotate(-0.4turn);
+.poster .sky {
+  top: 5%;
 }
-.floating-box h1 {
-	font-weight: 700;
-	font-size: 22pt;
-	margin: 15px 0;
+.poster .city {
+  top: 20%;
+  left: 50.9%;
 }
-.floating-box p {
-	color: #777;
-	line-height: 140%;
+.poster .city__touch-up {
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 15%;
+  border-radius: 999rem;
+  z-index: -1;
+  background: #f16e20;
 }
-.floating-box p.github {
-	font-size: 0.8em;
+.poster .ground {
+  left: 52.2%;
+  top: 31%;
 }
-.floating-box p.github a {
-	opacity: 0.2;
-	transition: 0.3s;
+.poster .ground__touch-up {
+  position: absolute;
+  top: 34%;
+  left: 48%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 6%;
+  border-radius: 999rem;
+  z-index: -1;
+  background: #923f21;
 }
-.floating-box p.github a:hover {
-	opacity: 1;
-	color: red;
-}
-.floating-box code {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-size: 0.8em;
-	opacity: 0.2;
+
+.hidden {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

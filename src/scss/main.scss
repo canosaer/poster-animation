@@ -22,3 +22,97 @@ TABLE OF CONTENTS:
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
+$poster-width: 1000;
+$poster-height: 1500;
+
+body {
+	min-height: 100vh;
+	padding: 5vh 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: whitesmoke;
+	font-family: sans-serif;
+}
+
+.poster {
+	position: relative;
+
+	overflow: hidden;
+
+	background-color: #fff2d7;
+	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+	z-index: -2;
+
+	@media (min-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vh * ($poster-width/$poster-height);
+		height: 90vh;
+	}
+
+	@media (max-aspect-ratio: #{$poster-width}/#{$poster-height}) {
+		width: 90vw;
+		height: 90vw * ($poster-height/$poster-width);
+	}
+
+	/*
+		Everything in % so it's fully responsive!!!!!
+	*/
+	.full-size {
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%; // of the poster width, should match height automatically
+	}
+
+	.death-star{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+	}
+
+	.sky{
+		top: 5%;
+	}
+
+	.city{
+		top: 20%;
+		left: 50.9%;
+
+		&__touch-up{
+			position: absolute;
+			top: 19%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60%;
+			height: 15%;
+			border-radius: 999rem;
+			z-index: -1;
+			background: #f16e20;
+		}
+	}
+
+	.ground{
+		left: 52.2%;
+		top: 31%;
+
+		&__touch-up{
+			position: absolute;
+			top: 34%;
+			left: 48%;
+			transform: translateX(-50%);
+			width: 60%;
+			height: 6%;
+			border-radius: 999rem;
+			z-index: -1;
+			background: #923f21;
+		}
+	}
+}
+
+// UTILITY
+
+.hidden{
+	display: none;
+}
