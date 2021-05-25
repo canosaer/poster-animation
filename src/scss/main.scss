@@ -76,6 +76,41 @@ body {
 		top: 5%;
 	}
 
+	.yellow-sun{
+		position: absolute;
+		top: 11%;
+		left: 30%;
+		width: 16.5%;
+		height: 11%;
+		border-radius: 999rem;
+		background: #f9a618;
+	}
+
+	.red-sun{
+		position: absolute;
+		top: 23%;
+		left: 12%;
+		width: 16.5%;
+		height: 11%;
+		border-radius: 999rem;
+		background: #f04f21;
+	}
+
+	.falcon{
+		position: absolute;
+		top: 26%;
+		left: 12%;
+		width: 10%;
+	}
+
+	.r2{
+		position: absolute;
+		top: 32.4%;
+		left: 75%;
+		width: 7%;
+		z-index: 2;
+	}
+
 	.city{
 		top: 20%;
 		left: 50.9%;
