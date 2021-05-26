@@ -21,12 +21,23 @@ class PosterAnimation {
 
         r2Timeline.to(
             r2, {
-                left: '300px',
-                top: '300px',
-                duration: 1,
-                ease: 'expo.in',
+                left: '50%',
+                top: '33.7%',
+                duration: 11,
+                ease: 'sine.in',
             }
         )
+        r2Timeline.to(
+            r2, {
+                left: '21.5%',
+                top: '33.5%',
+                duration: 11,
+                ease: 'sine.out',
+                transform: 'rotate(6deg)'
+            }
+        )
+
+        
         
     }
 
