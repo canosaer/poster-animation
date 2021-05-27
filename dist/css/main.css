@@ -200,8 +200,22 @@ body {
           transform: translateX(-50%);
   width: 80%;
 }
+.poster .death-star__touch-up {
+  position: absolute;
+  top: 34%;
+  left: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 8%;
+  height: 6%;
+  z-index: -1;
+  background: #fff2d7;
+}
 .poster .sky {
   top: 5%;
+  z-index: -3;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .yellow-sun {
   position: absolute;
@@ -211,6 +225,8 @@ body {
   height: 11%;
   border-radius: 999rem;
   background: #f9a618;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .red-sun {
   position: absolute;
@@ -220,12 +236,17 @@ body {
   height: 11%;
   border-radius: 999rem;
   background: #f04f21;
+  z-index: -2;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .falcon {
   position: absolute;
   top: 26%;
   left: 12%;
   width: 10%;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .r2 {
   position: absolute;
@@ -237,6 +258,8 @@ body {
 .poster .city {
   top: 20%;
   left: 50.9%;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .city__touch-up {
   position: absolute;
@@ -247,8 +270,10 @@ body {
   width: 60%;
   height: 15%;
   border-radius: 999rem;
-  z-index: -1;
+  z-index: -3;
   background: #f16e20;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .ground {
   left: 51.3%;
@@ -266,6 +291,8 @@ body {
   border-radius: 999rem;
   z-index: -1;
   background: #923f21;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .ground__touch-up2 {
   position: absolute;
@@ -278,6 +305,8 @@ body {
   height: 3%;
   z-index: 2;
   background: #923f21;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .ground__touch-up3 {
   position: absolute;
@@ -290,6 +319,8 @@ body {
   height: 4%;
   z-index: 0;
   background: #923f21;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .title {
   position: absolute;
