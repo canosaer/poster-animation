@@ -17,7 +17,10 @@ class PosterAnimation {
         let groundTouchup3 = document.querySelector('.ground__touch-up3')
         let r2 = document.querySelector('.r2')
 
-        let r2Timeline = gsap.timeline({repeat: -1, repeatDelay: 5})
+        // let r2Timeline = gsap.timeline({repeat: -1, repeatDelay: 5})
+        // let falconTimeline = gsap.timeline({repeat: -1, repeatDelay: 11})
+        let r2Timeline = gsap.timeline()
+        let falconTimeline = gsap.timeline()
 
         r2Timeline.to(
             r2, {
@@ -36,31 +39,35 @@ class PosterAnimation {
                 transform: 'rotate(6deg)'
             }
         )
-        gsap.to(
+        falconTimeline.to(
             falcon, {
-                duration: 22,
+                duration: 15,
                 left: '64%',
                 top: '14%',
-                ease: 'sine.inOut',
-                repeat: -1,
-                repeatDelay: 5,
+                ease: 'sine.in',
             }
+        )
+        falconTimeline.to(
+            falcon, {
+                duration: 1,
+                opacity: 0,
+            }, '-=1'
         )
         gsap.to(
             yellowSun, {
                 duration: 22,
                 top: '28%',
                 ease: 'sine.inOut',
-                repeat: -1,
+                // repeat: -1,
                 repeatDelay: 5,
             }
         )
         gsap.to(
             redSun, {
                 duration: 11,
-                top: '31.5%',
+                top: '32%',
                 ease: 'sine.inOut',
-                repeat: -1,
+                // repeat: -1,
                 repeatDelay: 16,
             }
         )
@@ -69,17 +76,17 @@ class PosterAnimation {
                 duration: 22,
                 filter: 'brightness(0.5)',
                 ease: 'sine.in',
-                repeat: -1,
+                // repeat: -1,
                 repeatDelay: 5,
             }
         )
         gsap.to(
-            [sky, ground, city, cityTouchup, yellowSun, redSun, falcon, groundTouchup1, groundTouchup2, groundTouchup3], {
-                delay: 22,
+            [sky, r2, ground, city, cityTouchup, yellowSun, redSun, falcon, groundTouchup1, groundTouchup2, groundTouchup3], {
+                delay: 18,
                 duration: 5,
                 filter: 'brightness(0)',
                 ease: 'sine',
-                repeat: -1,
+                // repeat: -1,
                 repeatDelay: 22,
             }
         )

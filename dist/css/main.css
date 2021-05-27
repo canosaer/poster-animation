@@ -247,6 +247,7 @@ body {
   width: 10%;
   -webkit-filter: brightness(1);
           filter: brightness(1);
+  opacity: 1;
 }
 .poster .r2 {
   position: absolute;
@@ -279,6 +280,8 @@ body {
   left: 51.3%;
   top: 31%;
   z-index: 1;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
 }
 .poster .ground__touch-up {
   position: absolute;
