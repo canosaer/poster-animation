@@ -16,6 +16,7 @@ class PosterAnimation {
         let groundTouchup2 = document.querySelector('.ground__touch-up2')
         let groundTouchup3 = document.querySelector('.ground__touch-up3')
         let r2 = document.querySelector('.r2')
+        let letters = document.querySelectorAll('.letter')
 
         // let r2Timeline = gsap.timeline({repeat: -1, repeatDelay: 5})
         // let falconTimeline = gsap.timeline({repeat: -1, repeatDelay: 11})
@@ -26,7 +27,7 @@ class PosterAnimation {
             r2, {
                 left: '50%',
                 top: '33.7%',
-                duration: 11,
+                duration: 7.5,
                 ease: 'sine.in',
             }
         )
@@ -34,28 +35,22 @@ class PosterAnimation {
             r2, {
                 left: '21.5%',
                 top: '33.5%',
-                duration: 11,
+                duration: 7.5,
                 ease: 'sine.out',
                 transform: 'rotate(6deg)'
             }
         )
         falconTimeline.to(
             falcon, {
-                duration: 15,
-                left: '64%',
+                duration: 7.5,
+                left: '80%',
                 top: '14%',
                 ease: 'sine.in',
             }
         )
-        falconTimeline.to(
-            falcon, {
-                duration: 1,
-                opacity: 0,
-            }, '-=1'
-        )
         gsap.to(
             yellowSun, {
-                duration: 22,
+                duration: 14,
                 top: '28%',
                 ease: 'sine.inOut',
                 // repeat: -1,
@@ -64,7 +59,7 @@ class PosterAnimation {
         )
         gsap.to(
             redSun, {
-                duration: 11,
+                duration: 7.5,
                 top: '32%',
                 ease: 'sine.inOut',
                 // repeat: -1,
@@ -73,7 +68,7 @@ class PosterAnimation {
         )
         gsap.to(
             [sky, city, cityTouchup, yellowSun, redSun, falcon, groundTouchup1, groundTouchup2, groundTouchup3], {
-                duration: 22,
+                duration: 14,
                 filter: 'brightness(0.5)',
                 ease: 'sine.in',
                 // repeat: -1,
@@ -82,7 +77,7 @@ class PosterAnimation {
         )
         gsap.to(
             [sky, r2, ground, city, cityTouchup, yellowSun, redSun, falcon, groundTouchup1, groundTouchup2, groundTouchup3], {
-                delay: 18,
+                delay: 10.5,
                 duration: 5,
                 filter: 'brightness(0)',
                 ease: 'sine',
@@ -90,6 +85,16 @@ class PosterAnimation {
                 repeatDelay: 22,
             }
         )
+        // for(let i=0;i<letters.length;i++){
+        //     if(i===0){
+        //         gsap.to(
+        //             letters[i], {
+        //                 duration: 7.5,
+        //                 left: '21%'
+        //             }
+        //         )
+        //     }
+        // }
 
 
         
