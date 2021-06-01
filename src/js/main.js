@@ -90,6 +90,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '19%'
                     }
@@ -99,6 +100,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '23%'
                     }
@@ -108,6 +110,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '27%'
                     }
@@ -117,6 +120,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '32.4%'
                     }
@@ -126,6 +130,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '36.9%'
                     }
@@ -135,6 +140,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '42%'
                     }
@@ -144,8 +150,18 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '46.4%'
+                    }
+                )
+            }
+            if(i===7){
+                gsap.to(
+                    letters[i], {
+                        duration: 5,
+                        opacity: 1,
+                        ease: 'sine.inOut',
                     }
                 )
             }
@@ -153,6 +169,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '53.4%'
                     }
@@ -162,6 +179,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '57%'
                     }
@@ -171,6 +189,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '61%'
                     }
@@ -180,6 +199,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '66.75%'
                     }
@@ -189,6 +209,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '70.7%'
                     }
@@ -198,6 +219,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '75.1%'
                     }
@@ -207,6 +229,7 @@ class PosterAnimation {
                 gsap.to(
                     letters[i], {
                         duration: 5,
+                        opacity: 1,
                         ease: 'sine.inOut',
                         left: '79.8%'
                     }

@@ -362,6 +362,7 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  opacity: 0;
 }
 .poster .letter_t-1 {
   top: 80.9%;
