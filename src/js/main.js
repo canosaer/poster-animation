@@ -48,6 +48,12 @@ class PosterAnimation {
                 ease: 'sine.in',
             }
         )
+        falconTimeline.to(
+            falcon, {
+                duration: 0.1,
+                opacity: 0,
+            }, "-=0.5"
+        )
         gsap.to(
             yellowSun, {
                 duration: 14,
